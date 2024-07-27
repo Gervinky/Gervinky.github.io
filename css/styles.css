@@ -1,0 +1,313 @@
+:root{ /*sirve para guardar "variables" como paletas de colores o medidas*/
+    --negro: hsl(0, 0%, 16%);
+    --negroclaro: hsl(0, 0%, 37%);
+    --azulgervi: rgb(48, 122, 206);
+    --blanco: #FFFFFF;
+    --amarillo:  rgb(235, 177, 53);
+    --naranja: rgb(241, 171, 39);
+}
+
+/* Fuentes */
+.krub-bold {
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.krub-regular {
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Globales */
+html{
+    font-size: 62.5%;/*esta medida en especifico sirve para usar rems más facilmente con respecto a pixeles*/
+    box-sizing: border-box; /* box model, nos evita el problema de sumar paddings y margins*/
+    /*scroll-snap-type: y mandatory;*/
+}
+
+/*### Scroll Snap ###
+    .servicios, .navegacion_principal{
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }*/
+
+*, *:before, *:after {/*Boxmodel pt.2*/
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /*1rem = 10px*/
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to bottom, var(--negro) 40%, var(--negroclaro) 100%);/*aplicar un gradiente de color*/
+}
+
+.contenedor {
+    max-width: 80rem;
+    margin: 0 auto;/*centra el elemento*/
+}
+
+/* design systems */
+/* tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+.boxstyle { /*<main>*/
+    background-color: #ececec;
+    /*sombra*/
+    -webkit-box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.85);
+    -moz-box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.85);
+    box-shadow: 0px 6px 8px 1px rgba(0,0,0,0.85);
+    /*borde redondeado*/
+    border-radius: .8rem;
+    /*Box Model*/
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Titulos */
+.titulo {
+    font-family: "VT323", monospace;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    color: #FFFFFF;
+}
+
+.titulo span {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+/* Botones */
+.boton {
+    background-color: var(--azulgervi);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 768px) {/*Media Queries "mq" (mientras la pantalla no sea menor) */
+    .boton {
+        width: auto;
+    }
+    
+}
+.boton:hover{
+    background-color: var(--amarillo);
+    color: var(--negro);
+    cursor: pointer;
+}
+/*Utilidades*/
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.flex{
+    display: flex;
+}
+
+/* Navegación */
+.nav-bg{
+    background-color: var(--azulgervi);
+}
+
+.navegacion_principal{
+    display: flex; /*Activación del flex*/
+    flex-direction: column;/*los elementos hijos los ordena en columnas*/
+    align-items: center;/*mueve al centro los elementos*/
+}
+@media (min-width: 768px) {
+    .navegacion_principal{
+        flex-direction: row;/*cambia el orden de los elementos a filas*/
+        justify-content: space-between;/*alinea los elementos verticalmente*/
+    }
+}
+
+.navegacion_principal a {
+    padding: 1rem;
+    color: var(--blanco);/*aplicación de las variables del root:*/
+    text-decoration: none;/*quita el subrayado de los enlaces*/
+    font-size: 2rem;
+    font-weight: 700;/*negritas*/
+}
+
+.navegacion_principal a:hover{/*cuando el cursor está encima del elemento*/
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+
+/* HERO */
+.hero {
+    background-image: url(../images/forest.png); /** el "../" indica regresar al directorio anterior **/
+    background-repeat: no-repeat;/*evita que se repita la imagen de fondo*/
+    background-size: cover;/*hace que la imagen cubra todo el espacio*/
+    height: 450px;
+    position: relative;/*posición como objeto padre para que el objeto hijo tenga una pos. absoluta*/
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;/*permite que se modifique la posicion del elemento de forma absoluta con respecto al espacio padre*/
+    background-color: rgba(0, 0, 0, 0.438);/**anterior forma de hacerlo**/
+    background-color: rgb(0 0 0 / 48%); /** nueva forma mas corta de transparencias **/
+    width: 100%;
+    height: 100%;
+
+    display: flex;/**vv permite centrar tanto vertical como horizontalmente elementos vv**/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/*Alineación vertical*/
+}
+
+.contenido-hero h2, /**seleccionar dos elementos dentro de un elemento con cierta etiqueta**/
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenido-hero h2{
+    font-size: 4rem;
+}
+
+.contenido-hero .ubicacion{
+    padding: 1px;
+    display: flex;
+    align-items: center;
+}
+
+/*Servicios*/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;/*activar el grid*/
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 1fr 1fr 1fr;/*manera simplificada donde 1fr es una fraccion del 100%*/
+        grid-template-columns: repeat(3, 1fr);/*aun más simplificado donde se repite 3 veces "1fr"*/
+        column-gap: 1rem;/*crear separacion entre los elementos*/ 
+        
+    } 
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--azulgervi);
+    font-weight: bold;
+}
+.servicio p {
+    line-height: 2;/*Interlineado*/
+}
+
+.servicio .iconos {
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--amarillo);
+    border-radius: 30%; /*crea un circulo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contacto*/
+.formulario {
+    background-color: rgba(0, 0, 0, 0.664);
+    width: min(60rem, 100%);/*utiliza el valor más pequeño entre 60rem o el 100% del ancho del elemento*/
+    border-radius: 0.8rem;
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.formulario fieldset{
+    border: none;/*quita el borde del fielset*/
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 728px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;/*Define las areas de las columnas*/
+        grid-template-rows: auto auto auto;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3){ /*Selecciona el tercer hijo del elemento, se cuentan de arriba hacia abajo segun en el codigo*/
+        grid-column: 1 /3;/*posiciona los elemaentos*/
+    }
+    .campo:nth-child(4){
+        grid-column: 1 /3;
+    }
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea {
+    height: 20rem;
+    width: 53.2rem;
+    max-width: 53.2rem;
+    resize: none;
+}
+.campo input, .campo textarea{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.enviar .boton{
+    width: 100%;/*para que el botón se extienda*/
+}
+.footer {
+    text-align: center;
+}
+/*
+.servicio .iconos svg{
+    scale: 2;
+}*/
+/*###manera larga pero facil de hacer un grid ###
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px;
+    
+#### manera corta de hacer el grid ###
+    grid: 200px 800px / 300px 300px;*/
