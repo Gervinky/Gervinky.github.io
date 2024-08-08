@@ -45,6 +45,8 @@ body{
     font-size: 16px; /*1rem = 10px*/
     font-family: "Krub", sans-serif;
     background-image: linear-gradient(to bottom, var(--negro) 40%, var(--negroclaro) 100%);/*aplicar un gradiente de color*/
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contenedor {

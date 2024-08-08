@@ -1,0 +1,93 @@
+:root{ /*sirve para guardar "variables" como paletas de colores o medidas*/
+    --negro: hsl(0, 0%, 16%);
+    --negroclaro: hsl(0, 0%, 37%);
+    --azulgervi: rgb(48, 122, 206);
+    --blanco: #FFFFFF;
+    --amarillo:  rgb(235, 177, 53);
+    --naranja: rgb(241, 171, 39);
+}
+*, *:before, *:after {/*Boxmodel pt.2*/
+    box-sizing: inherit;
+}
+
+.krub-bold {
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.krub-regular {
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h2 {
+    font-family: "Krub", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+.hero{
+    width: 30rem;
+    text-align: center;
+    margin: 0 auto;
+}
+p{
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    font-size: 62.5%;/*esta medida en especifico sirve para usar rems más facilmente con respecto a pixeles*/
+    box-sizing: border-box; /* box model, nos evita el problema de sumar paddings y margins*/
+    background-color: var(--negro);
+    color: #FFFFFF;
+}
+
+.linea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.linea p {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    width: 30rem;
+    margin-left: 0rem;
+    text-align: justify;
+}
+.imagen {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 3rem;
+}
+
+@media (min-width: 728px) {
+    .linea {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-left: 2rem;
+        align-items: flex-start;   
+    }
+    .linea p {
+        width: 38rem;
+        margin-top: 0rem;
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    }
+    .hero{
+        text-align: left;
+        margin-left: 8rem;
+        width: 100%;
+    }
+}

@@ -1,13 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><!-- que html estamos usando, en este caso es la ultima version-->
+<html lang="es"><!-- lenguaje-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8"><!-- es el encoding del texto-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- información del navegador -->
+    <title>WizardSkullDev</title><!-- aparece en la pestaña del navegador, es bastante util para el SEO -->
+
+        <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/SobreMi-style.css" as="style">
+    <link rel="stylesheet" href="css/SobreMi-style.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>Hola esto es sobre mí</h1>
+    <header>
+        <h1 class="titulo">Irving Gerardo<span> WizardSkullDev.</span></h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion_principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="sobremi.html">Sobre Mi</a>
+            <a href="#">Experiencia</a>
+            <a href="#">Portafolio</a>
+        </nav>
+    </div>
+
+    <section class="hero">
+            <h2>Sobre Mi </h2>
+    </section>
+    
+    <main class="contenedor boxstyle">
+        <div class="linea">
+            <img class="imagen" src="images/gervinky.png">
+            <p>
+                Soy Irving Gerardo Maldonado Guzmán tambien conocido como Gervinky o WizardSkull 
+                tengo gran pasión por la programación, los videojuegos, el arte, etc.<br><br>
+                Estudié Ing. Informática en la UDG, 
+                sin embargo me gusta aplicar la gran mayoría de mis conocimientos en las 
+                distintas ramas ya sea bases de datos, desarrollo web, videojuegos, etc.
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. WizardSkullDev.</p>
+    </footer>
+    
 </body>
 </html>
