@@ -5,6 +5,8 @@
     --blanco: #FFFFFF;
     --amarillo:  rgb(235, 177, 53);
     --naranja: rgb(241, 171, 39);
+    --krub: "Krub", sans-serif;
+    --pixelart_font: "VT323", monospace;
 }
 *, *:before, *:after {/*Boxmodel pt.2*/
     box-sizing: inherit;
@@ -26,6 +28,11 @@
     font-style: normal;
 }
 
+h1{
+    font-size: 4rem;
+    font-family: var(--pixelart_font);
+    font-weight: nor;
+}
 
 h2 {
     font-family: "Krub", sans-serif;
