@@ -279,10 +279,17 @@ header h1{
 /*Contacto*/
 .redes {
     display: grid;/*activar el grid*/
-    grid-template-columns: repeat(4, 1fr);/*aun más simplificado donde se repite 3 veces "1fr"*/
+    grid-template-columns: repeat(2, 1fr);/*aun más simplificado donde se repite 3 veces "1fr"*/
     column-gap: 1rem;/*crear separacion entre los elementos*/ 
-        
 }
+
+@media (min-width: 728px) {
+    .redes{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 .red{
     display: flex;
     justify-content: center;
@@ -372,16 +379,38 @@ header h1{
 }
 
 .linea_imagen-PencilHero {
-    height: 20rem;
+    max-height: 20rem;
+    max-width: 80%;
 }
 
 /*########## PENCIL HERO #############*/
-
 .two_columns {
     display: grid;
     column-gap: 2rem;
     margin: 2rem;
     justify-items: center;
+}
+.twoxtwo_grid{
+    display: grid;
+    gap: 1rem;
+    margin: 2rem;
+    justify-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.twoxtwo_grid img{
+    max-width: 100%;
+    max-height: 30rem;
+}
+.togrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 728px) {
+    .togrid{
+        display: flex;
+    }
 }
 .c80-20{
     grid-template-columns: 80% 20%;
@@ -400,6 +429,7 @@ header h1{
     max-width: 80%;
     margin: auto 0;
 }
+
 .two_columns .boxstyle {
     margin-bottom: 0;
 }
@@ -413,9 +443,15 @@ header h1{
 .section_title-pencil {
     background-color: rgb(0 0 0 / 48%);
     border-radius: 1rem;
-    width: 34rem;
+    max-width: 34rem;
     color: white;
-    margin-left: 2rem;
+    margin: 0 auto;
+
+}
+@media (min-width:728px){
+    .section_title-pencil{
+        margin-left: 2rem;
+    }
 }
 
 .section_title-pencil h2{
@@ -426,6 +462,47 @@ header h1{
 .projectlogo {
     margin-top: 3rem;
     height: 20rem;
+
+}
+.flexing{
+    display: flex;
+}
+.imgflexing{
+    width: 20rem;
+    height: 20rem;
+    max-width: 20rem;
+    max-height: 100%;
+    margin-left: 2rem;
+}
+
+.linea_rightup{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.linea_rightup img {
+    margin: 0 auto;
+}
+
+
+@media (min-width: 728px) {
+    .linea_rightup{
+        flex-direction: row;
+    }
+    .linea_rightup p {
+        margin-right: 2rem;
+    }
+}
+
+
+
+
+.proximamente{
+    margin: 0 auto;/*centra el elemento*/
+    text-align: center;
+    background-color: rgb(0 0 0 / 48%);
+    border-radius: 1rem;
+    width: 34rem;
+    color: white;
     margin-bottom: 2rem;
 }
 
@@ -434,9 +511,16 @@ header h1{
     width: 70%;
 }
 .parrafo-justified{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: justify;
 }
+@media (min-width:728px){
+    .parrafo-justified{
+        font-size: 1.8rem;
+    }
+}
+
+
 .lista{
     text-align: left;
     line-height: 3rem;
@@ -449,8 +533,6 @@ header h1{
 .lista ol li::marker {
     font-weight:bold;
 }
-
-
 /*
 .servicio .iconos svg{
     scale: 2;
