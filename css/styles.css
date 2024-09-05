@@ -163,7 +163,6 @@ header h1{
 /* Navegación */
 .nav-bg{
     background-color: var(--azulgervi);
-    margin-bottom: 3rem;
 }
 
 .navegacion_principal{
@@ -380,10 +379,22 @@ header h1{
 
 .two_columns {
     display: grid;
-    grid-template-columns: 80% 20%;
     column-gap: 2rem;
     margin: 2rem;
+    justify-items: center;
 }
+.c80-20{
+    grid-template-columns: 80% 20%;
+}
+.c50-50{
+    grid-template-columns: 1fr 1fr;
+}
+.login-register{
+    max-height:25rem;
+    margin: auto 0;
+    justify-content: center;
+}
+
 .two_columns img{
     border-radius: 2rem;
     max-width: 80%;
@@ -413,10 +424,31 @@ header h1{
 }
 
 .projectlogo {
+    margin-top: 3rem;
     height: 20rem;
     margin-bottom: 2rem;
 }
 
+
+.Screenshot{
+    width: 70%;
+}
+.parrafo-justified{
+    font-size: 1.8rem;
+    text-align: justify;
+}
+.lista{
+    text-align: left;
+    line-height: 3rem;
+}
+.lista ol li {
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.lista ol li::marker {
+    font-weight:bold;
+}
 
 
 /*
